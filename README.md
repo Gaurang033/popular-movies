@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## API key 
+provide your API key in resource/credential.json 
+
+## modules used 
+* redux 
+* thunk 
+* axios 
 
 ## Available Scripts
 
