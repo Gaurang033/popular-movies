@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Grid from './grid';
 
-
 export default class MoviesComponent extends Component {
     componentDidMount() {
         this.props.fetchShows()
@@ -31,23 +30,6 @@ export default class MoviesComponent extends Component {
         }
     }
 
-    grid = (popular_movies) => {
-        return (
-            popular_movies.length ?
-                <div className="row">
-                    {
-                        popular_movies.map((movie) =>
-                            <div className="block" key={movie.id + this.props.page}>
-                                <img src={"http://image.tmdb.org/t/p/w185" + movie.poster_path} alt={movie.title} />
-                            </div>
-                        )
-                    }
-                </div>
-                : <div>Loading...</div>
-        )
-
-    }
-
     render() {
         // console.log(this.props)
         // let popular_movies = this.props.popular_movies
@@ -55,7 +37,6 @@ export default class MoviesComponent extends Component {
         return (
             <div className="row" onScroll={this.handleScroll}>
                 <Grid popular_movies={this.props.popular_movies} />
-                {/* {this.grid(popular_movies)} */}
             </div>
         )
     }

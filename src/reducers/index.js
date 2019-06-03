@@ -25,7 +25,9 @@
 
 import { combineReducers } from 'redux'
 import movieReducer from './movie_reducers'
+import movieDetailsReducer from './movie_details_reducer';
 
 export default combineReducers({
-    movieReducer
+    movieReducer,
+    details: movieDetailsReducer
 })
